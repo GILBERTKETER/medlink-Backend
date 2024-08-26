@@ -6,8 +6,7 @@ from cryptography.fernet import Fernet
 import base64
 from django.conf import settings
 import pyotp
-# Retrieve the encryption key from environment variables
-key = settings.ENCRYPTION_KEY.encode()  # Ensure it's in bytes format
+key = settings.ENCRYPTION_KEY.encode()  
 cipher_suite = Fernet(key)
 
 class PatientManager(BaseUserManager):
@@ -57,7 +56,7 @@ class Patient(AbstractBaseUser):
 
     def generate_and_store_otp_code(self):
         import random
-        otp_code = str(random.randint(100000, 999999))  # Generate a 6-digit OTP code
+        otp_code = str(random.randint(100000, 999999)) 
         self.otp_code = otp_code
         self.save()
 

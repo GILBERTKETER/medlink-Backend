@@ -46,7 +46,6 @@ ALLOWED_HOSTS = []
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
-    'https://192.168.43.153:3000',
 ]
 # Application definition
 
@@ -60,8 +59,10 @@ INSTALLED_APPS = [
     'patients',
     'rest_framework',
     'corsheaders',
-        'authentication',
-        'allauth',
+    'authentication',
+    'allauth',
+    'bookAppointments',
+    'timelines',
 
 ]
 AUTH_USER_MODEL = 'authentication.User'
@@ -95,7 +96,7 @@ LOGGING = {
 }
 
 MIDDLEWARE = [
-        'patients.middleware.DisableCSRF', 
+    'patients.middleware.DisableCSRF', 
     'corsheaders.middleware.CorsMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
