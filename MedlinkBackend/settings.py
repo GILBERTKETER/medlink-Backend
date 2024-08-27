@@ -63,7 +63,7 @@ INSTALLED_APPS = [
     'allauth',
     'bookAppointments',
     'timelines',
-
+    'chats',
 ]
 AUTH_USER_MODEL = 'authentication.User'
 

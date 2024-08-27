@@ -23,4 +23,5 @@ urlpatterns = [
     path('auth/', include('authentication.urls')),
     path('bookings/', include('bookAppointments.urls')),
     path('reminders/', include('timelines.urls')),
+    path('messages/', include('chats.urls')),
 ]
